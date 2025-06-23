@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="gallery-title">Online Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('animal')">Animal</button>
+  </div>
+
+   <div class="gallery">
+  <!-- Nature -->
+  <div class="gallery-item nature">
+    <img src="https://picsum.photos/id/1018/600/400" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-item nature">
+    <img src="https://picsum.photos/id/1015/600/400" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-item nature">
+    <img src="https://picsum.photos/id/1020/600/400" onclick="openLightbox(this)">
+  </div>
+
+  <!-- City -->
+  <div class="gallery-item city">
+    <img src="https://picsum.photos/id/1011/600/400" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-item city">
+    <img src="https://picsum.photos/id/1003/600/400" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-item city">
+    <img src="https://picsum.photos/id/1010/600/400" onclick="openLightbox(this)">
+  </div>
+
+  <!-- Animal -->
+  <div class="gallery-item animal">
+    <img src="https://picsum.photos/id/237/600/400" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-item animal">
+    <img src="https://picsum.photos/id/219/600/400" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-item animal">
+    <img src="https://picsum.photos/id/1025/600/400" onclick="openLightbox(this)">
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-content">
+    <button class="nav prev" onclick="changeImage(-1)">❮</button>
+    <button class="nav next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
